@@ -148,7 +148,7 @@ std::vector<uint8_t> decrypt(const std::string& key, const std::vector<uint8_t>&
 }
 
 int main() {
-    std::string filename = "question6_data.txt";
+    std::string filename = "Input.txt";
     std::ifstream file(filename, std::ios::binary);
     if (!file.is_open()) {
         std::cout << "Input File Error" << std::endl;
