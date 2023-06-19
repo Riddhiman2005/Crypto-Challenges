@@ -99,7 +99,7 @@ int main() {
     std::string cipherText;
     bool flag = false;
     double min = 0.0;
-    std::string filename = "Question File.txt";
+    std::string filename = "Input.txt";
     std::ifstream file(filename);
     std::string line;
     while (std::getline(file, line)) {
