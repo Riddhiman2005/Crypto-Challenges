@@ -14,10 +14,7 @@ By solving cryptographic challenges, I not only gained a better understanding of
 
 
 
-
-
-
-# Cryptopals Challenges #
+# [Cryptopals Challenges](https://cryptopals.com/) #
 
 Cryptopalsis a popular collection of exercises designed to teach and demonstrate various aspects of applied cryptography. Created by the Matasano Security LLC team, Cryptopals offers a hands-on approach to learning cryptography by focusing on practical challenges and real-world scenarios.
 
@@ -26,17 +23,15 @@ The challenges have been grouped under 8 sets and definitely are the best proble
 # Motivation #
 
 
-Solving Crypto problems requires pateinces, an indepth understanding of the topics and their applications.THe final thing to solve the problems is like any other problem to work on them . So, there will bebugs, errors, friu 
+Solving cryptographic problems is not for the faint of heart. 
+It demands strength of mind and spirit. It requires the resilience to endure setbacks and the commitment to persevere.
+In the face of bugs, errors, and frustrations, I used to find strength by listening to music. It kept me focused, motivated, and made the journey enjoyable.
 
-Thoughts and notes
-These challenges are among the best programming / math / crypto exercises I have done.
+# Languages #
 
-By solving all of them not only I learned more about applied cryptography, but also I honed my programming skills in Python.
-
-I wrote down some thoughts and notes in the comments of the code.
-
-As an additional note, I personally found sets 5 and 6 to be - on average - easier than the previous ones, although in the website they state that they should be "significantly harder".
-
+I've been working on these sets since March'2022.
+Most o of the problems are written in **C++** languages. 
+But I'm trying to include some more codes/alternate solutions to the same problems using different languages.
 
 # Contribution #
 
