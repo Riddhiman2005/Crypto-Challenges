@@ -6,7 +6,7 @@
 #include <openssl/rand.h>
 #include <openssl/evp.h>
 
-const char* PTXT_PATH = "../../res/20.txt"; // Plaintext list
+const char* PTXT_PATH = "../../Data.txt"; 
 
 struct Array
 {
