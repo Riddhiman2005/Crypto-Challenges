@@ -27,6 +27,7 @@ The challenges have been grouped under 8 sets and definitely are the best proble
 
 
 Solving Crypto problems requires pateinces, an indepth understanding of the topics and their applications.THe final thing to solve the problems is like any other problem to work on them . So, there will bebugs, errors, friu 
+
 Thoughts and notes
 These challenges are among the best programming / math / crypto exercises I have done.
 
@@ -36,10 +37,12 @@ I wrote down some thoughts and notes in the comments of the code.
 
 As an additional note, I personally found sets 5 and 6 to be - on average - easier than the previous ones, although in the website they state that they should be "significantly harder".
 
-Coming in the future
-Solutions to sets 7 and 8: I am looking forward to when the set 8 challenges will be published on the website.
-Contribute
-Please feel invited to contribute by creating a pull request to submit the code or bug fixes you would like to be included in my solutions.
 
-License
-Everything in this repository is distributed under the terms of the MIT License. See file "LICENSE" for further reference.
+# Contribution #
+
+Please feel invited to contribute by creating a pull request to 
+submit the code or bug fixes you would like to be included in my solutions.
+
+# License #
+
+This repository is distributed under the terms of the **MIT License**.
