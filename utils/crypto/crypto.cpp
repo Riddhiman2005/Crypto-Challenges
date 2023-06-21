@@ -1,8 +1,6 @@
-
 #include <openssl/evp.h>
 #include <openssl/sha.h>
 #include <cstring>
-
 
 size_t pkcs7(unsigned char * buff, size_t msglen, size_t bsize)
 {
@@ -247,4 +245,40 @@ int macmd4chk(uint8_t * data, size_t l, uint8_t mac[16], uint8_t key[16])
   return std::memcmp(mac, datamac, 16) == 0;
 }
 
-void hmacsha1(const uint8_t * data, size_t l, uint8_t
+void hmacsha1(const uint8_t * data, size_t l, uint8_t out[20],
+  const uint8_t key[64])
+{
+  SHA1_CTX ctx;
+
+  // Xor key with inner padding
+  uint8_t i_key_pad[64];
+  sbxorarray(key, 0x36, i_key_pad, 64);
+
+  // Inner hash
+  uint8_t hash1[20];
+  SHA1Init(&ctx);
+  SHA1Update(&ctx, i_key_pad, 64);
+  SHA1Update(&ctx, data, l);
+  SHA1Final(hash1, &ctx);
+
+  // Xor key with outer padding
+  uint8_t o_key_pad[64];
+  sbxorarray(key, 0x5c, o_key_pad, 64);
+
+  // Outer hash
+  SHA1Init(&ctx);
+  SHA1Update(&ctx, o_key_pad, 64);
+  SHA1Update(&ctx, hash1, 20);
+  SHA1Final(out, &ctx);
+}
+
+int hmacsha1chk(const uint8_t * data, size_t l, const uint8_t hmac[20],
+  const uint8_t key[64])
+{
+  // Calculate HMAC
+  uint8_t datahmac[20];
+  hmacsha1(data, l, datahmac, key);
+
+  // Compare
+  return std::memcmp(hmac, datahmac, 20) == 0;
+}
