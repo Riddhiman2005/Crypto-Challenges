@@ -40,7 +40,7 @@ I'm really grateful to @[Sumana89](https://github.com/Sumana89) for providing me
 
 # utils #
 
-Make sure to visit the utils directory to find the necessary header files.
+Make sure to visit the utils directory to find the necessary header files. All the utils are not uploaded so far. Will add all of them soon. Work is under progress.
 
 # Unsolved Challenges #
 
