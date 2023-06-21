@@ -46,6 +46,10 @@ Make sure to visit the utils directory to find the necessary header files. All t
 
 
 
+# Precaution and Advice #
+
+Some codes use the OpenSSL library. Make sure to link against the OpenSSL library when compiling the code. All those are given under the utils folder.
+
 # Contribution #
 
 Please feel invited to contribute by creating a pull request to 
