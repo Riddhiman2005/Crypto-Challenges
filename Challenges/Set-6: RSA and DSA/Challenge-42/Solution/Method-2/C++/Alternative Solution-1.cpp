@@ -4,6 +4,7 @@
 #include <openssl/sha.h>
 
 // Cube root function
+
 BIGNUM* integer_cube_root(const BIGNUM* n) {
     BIGNUM* low = BN_new();
     BIGNUM* high = BN_new();
@@ -36,6 +37,7 @@ BIGNUM* integer_cube_root(const BIGNUM* n) {
 }
 
 // Forge RSA signature
+
 BIGNUM* forge_rsa_signature(const char* message) {
     // RSA modulus and exponent (public key)
     const char* N_str = "1234567890123456789012345678901234567890"; // Replace with the actual modulus
@@ -62,15 +64,18 @@ BIGNUM* forge_rsa_signature(const char* message) {
     int length = BN_num_bytes(N);
 
     // Construct the forged block
+    
     BN_zero(forged_block);
     BN_lshift(forged_block, hash_value, 8 * (length - SHA_DIGEST_LENGTH));
     BN_set_bit(forged_block, 8 * (length - SHA_DIGEST_LENGTH) - 1);
     BN_set_bit(forged_block, 8 * length - 1);
 
     // Calculate the cube root of the forged block
+    
     cube_root = integer_cube_root(forged_block);
 
     // Forge the RSA signature
+    
     BN_mod_exp(forged_signature, cube_root, E, N, nullptr);
 
     BN_free(N);
@@ -87,6 +92,7 @@ int main() {
     BIGNUM* forged_signature = forge_rsa_signature(message);
 
     // Verify the forged signature (replace with the actual verification logic)
+    
     bool is_valid = true; // Replace with the actual verification result
 
     char* hex_signature = BN_bn2hex(forged_signature);
