@@ -44,6 +44,16 @@ Make sure to visit the utils directory to find the necessary header files. All t
 
 # Unsolved Challenges #
 
+ ### SET-6 ###
+
+
+ 
+ ### SET-7 ###
+
+ 
+ ### SET-8 ###
+
+SET- 8 is the Hardest. And except for the first challenge of the SET, others are unsolved.
 
 
 # Precaution and Advice #
